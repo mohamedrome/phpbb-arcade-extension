@@ -1,0 +1,54 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{ARCADE_ACP_TITLE}</h1>
+
+<div class="panel">
+    <div class="inner">
+        <form method="post" action="{U_ACTION}">
+            <fieldset>
+                <legend>{L_ACP_ARCADE_TITLE}</legend>
+
+                <dl>
+                    <dt><label for="game_name">{L_ARCADE_GAME_NAME}</label></dt>
+                    <dd><input type="text" id="game_name" name="game_name" /></dd>
+                </dl>
+
+                <dl>
+                    <dt><label for="game_description">{L_ARCADE_GAME_DESCRIPTION}</label></dt>
+                    <dd><textarea id="game_description" name="game_description"></textarea></dd>
+                </dl>
+
+                <dl>
+                    <dt><label for="game_file">{L_ARCADE_GAME_FILE}</label></dt>
+                    <dd><input type="text" id="game_file" name="game_file" /></dd>
+                </dl>
+
+                <dl>
+                    <dt><label for="game_type">{L_ARCADE_GAME_TYPE}</label></dt>
+                    <dd>
+                        <select id="game_type" name="game_type">
+                            <option value="html5">HTML5</option>
+                            <option value="iframe">iframe</option>
+                        </select>
+                    </dd>
+                </dl>
+
+                <input type="submit" name="submit" value="{L_SUBMIT}" />
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="forumbg">
+    <div class="inner">
+        <h3>{L_ARCADE_GAMES}</h3>
+
+        <!-- BEGIN games -->
+        <div class="row">
+            {games.NAME} - {games.SLUG}
+        </div>
+        <!-- END games -->
+    </div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

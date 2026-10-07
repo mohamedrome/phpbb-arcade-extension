@@ -1,0 +1,26 @@
+{
+  "name": "myarcade/arcade",
+  "type": "phpbb-extension",
+  "description": "Arcade extension for phpBB 3.3.5 with IPB game import support and rankings",
+  "homepage": "https://example.com",
+  "version": "1.0.0",
+  "time": "2026-10-07",
+  "license": "GPL-2.0-only",
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "you@example.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "phpbb/phpbb": ">=3.3.5"
+  },
+  "extra": {
+    "display-name": "Arcade",
+    "soft-require": {
+      "phpbb/phpbb": ">=3.3.5"
+    }
+  }
+}

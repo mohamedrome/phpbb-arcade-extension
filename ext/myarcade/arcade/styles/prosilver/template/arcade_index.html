@@ -1,0 +1,25 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_ARCADE_TITLE}</h2>
+
+<div class="forumbg">
+    <div class="inner">
+        <h3>{L_ARCADE_GAMES}</h3>
+        <ul class="topiclist forums">
+            <!-- BEGIN arcade_games -->
+            <li class="row">
+                <dl class="icon">
+                    <dt>
+                        <a href="{U_ARCADE}{arcade_games.GAME_SLUG}">{arcade_games.GAME_NAME}</a>
+                    </dt>
+                    <dd class="lastpost">
+                        {arcade_games.GAME_DESCRIPTION}
+                    </dd>
+                </dl>
+            </li>
+            <!-- END arcade_games -->
+        </ul>
+    </div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

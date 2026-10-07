@@ -1,0 +1,15 @@
+myarcade_arcade_index:
+  path: /arcade
+  defaults: { _controller: myarcade.arcade.controller.main:index }
+
+myarcade_arcade_game:
+  path: /arcade/{game_slug}
+  defaults: { _controller: myarcade.arcade.controller.game:show }
+  requirements:
+    game_slug: .+
+
+myarcade_arcade_ranking:
+  path: /arcade/{game_slug}/ranking
+  defaults: { _controller: myarcade.arcade.controller.game:ranking }
+  requirements:
+    game_slug: .+

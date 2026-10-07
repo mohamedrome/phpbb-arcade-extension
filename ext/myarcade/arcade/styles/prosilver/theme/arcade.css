@@ -1,0 +1,18 @@
+.arcade-game-frame {
+    margin-top: 18px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.arcade-game-frame iframe {
+    border: 0;
+    display: block;
+    width: 100%;
+    min-height: 500px;
+}
+
+.forumbg .row {
+    padding: 8px 12px;
+}

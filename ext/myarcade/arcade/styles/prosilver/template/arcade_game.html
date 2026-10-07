@@ -1,0 +1,40 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{ARCADE_GAME_NAME}</h2>
+
+<div class="panel">
+    <div class="inner">
+        <p>{ARCADE_GAME_DESCRIPTION}</p>
+
+        <div class="arcade-game-frame">
+            <iframe src="{ARCADE_GAME_FILE}" width="100%" height="500" title="{ARCADE_GAME_NAME}"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="forumbg">
+    <div class="inner">
+        <h3>{L_ARCADE_TOP_SCORES}</h3>
+
+        <table class="table1">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>{L_USERNAME}</th>
+                <th>{L_ARCADE_RANKING}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- BEGIN arcade_scores -->
+            <tr>
+                <td>{arcade_scores.NUMBER}</td>
+                <td>{arcade_scores.USERNAME}</td>
+                <td>{arcade_scores.SCORE}</td>
+            </tr>
+            <!-- END arcade_scores -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

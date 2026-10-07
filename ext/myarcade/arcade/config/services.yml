@@ -1,0 +1,55 @@
+services:
+  myarcade.arcade.controller.main:
+    class: myarcade\arcade\controller\main
+    arguments:
+      - '@config'
+      - '@dbal.conn'
+      - '@template'
+      - '@user'
+      - '@request'
+      - '@controller.helper'
+      - '@auth'
+
+  myarcade.arcade.controller.game:
+    class: myarcade\arcade\controller\game
+    arguments:
+      - '@config'
+      - '@dbal.conn'
+      - '@template'
+      - '@user'
+      - '@request'
+      - '@controller.helper'
+      - '@auth'
+
+  myarcade.arcade.model.game:
+    class: myarcade\arcade\model\game
+    arguments:
+      - '@dbal.conn'
+      - '@config'
+
+  myarcade.arcade.model.score:
+    class: myarcade\arcade\model\score
+    arguments:
+      - '@dbal.conn'
+      - '@config'
+
+  myarcade.arcade.model.trophy:
+    class: myarcade\arcade\model\trophy
+    arguments:
+      - '@dbal.conn'
+      - '@config'
+
+  myarcade.arcade.model.import_ipb:
+    class: myarcade\arcade\model\import_ipb
+    arguments:
+      - '@dbal.conn'
+      - '@config'
+
+  myarcade.arcade.listener:
+    class: myarcade\arcade\event\listener
+    arguments:
+      - '@template'
+      - '@user'
+      - '@config'
+    tags:
+      - { name: event.listener }
